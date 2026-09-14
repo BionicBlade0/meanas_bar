@@ -56,7 +56,7 @@ Scope {
 
                 Temperature {}
 
-                // Weather {}
+                Weather {}
 
                 ActiveApps {}
             }
