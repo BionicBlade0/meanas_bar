@@ -33,7 +33,7 @@ WidgetBox {
     Process {
         id: getWeather
 
-        command: ["/mnt/hiroshi/hyprland_dotfiles/_hyprland_env/bin/python", "/mnt/hiroshi/hyprland_dotfiles/_quickshell_bar/weather/weather.py"]
+        command: ["/mnt/hiroshi/Development/hyprland_dotfiles/_hyprland_env/bin/python", "/mnt/hiroshi/Development/meanas_bar/weather/weather.py"]
 
         stdout: StdioCollector {
             onStreamFinished: {
