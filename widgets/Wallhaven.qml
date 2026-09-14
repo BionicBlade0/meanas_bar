@@ -139,7 +139,7 @@ WidgetBox {
                                     onClicked: mouse => {
                                         if (mouse.button == Qt.LeftButton) {
                                             popup.popupGrab.cleared();
-                                            wallpaper.command = ["/mnt/hiroshi/Development/hyprland_dotfiles/_hyprland_env/bin/python", "/mnt/hiroshi/Development/meanas_bar/wallhaven/wallpaper.py", image.path];
+                                            wallpaper.command = ["python", "./wallhaven/wallpaper.py", image.path];
                                             wallpaper.running = true;
                                         }
                                     }
@@ -190,7 +190,7 @@ WidgetBox {
     Process {
         id: thumbnails
 
-        command: ["/mnt/hiroshi/Development/meanas_bar/wallhaven/thumbnails", "https://wallhaven.cc/api/v1/search?sorting=relevance&q=" + searchField.text + "&page=" + pageField.text]
+        command: ["./wallhaven/thumbnails", "https://wallhaven.cc/api/v1/search?sorting=relevance&q=" + searchField.text + "&page=" + pageField.text]
         onStarted: {
             thumbnailLayout.model = "";
         }
