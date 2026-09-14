@@ -17,8 +17,8 @@ WidgetBox {
     }
     hoverEnabled: true
     implicitWidth: panelLayout.implicitWidth
-    bottomRightRadius: 20
-    topLeftRadius: 20
+    bottomRightRadius: 20 * panel.scale
+    topLeftRadius: 20 * panel.scale
 
     MyRow {
         id: panelLayout
@@ -52,8 +52,8 @@ WidgetBox {
                     id: menuBox
 
                     color: "transparent"
-                    implicitHeight: popup.implicitHeight - searchField.implicitHeight - 20
-                    implicitWidth: popup.implicitWidth - 40
+                    implicitHeight: popup.implicitHeight - searchField.implicitHeight - (20 * panel.scale)
+                    implicitWidth: popup.implicitWidth - (40 * panel.scale)
                     clip: true
 
                     GridView {
@@ -65,7 +65,7 @@ WidgetBox {
                         })
 
                         cellWidth: menuBox.implicitWidth / 2
-                        cellHeight: 40
+                        cellHeight: 40 * panel.scale
                         model: filListApps.sort((a, b) => {
                             return a.name.localeCompare(b.name);
                         })
@@ -73,17 +73,17 @@ WidgetBox {
 
                         delegate: Rectangle {
                             color: "transparent"
-                            implicitWidth: menuLayout.cellWidth - 20
+                            implicitWidth: menuLayout.cellWidth - (20 * panel.scale)
                             implicitHeight: menuLayout.cellHeight
                             clip: true
 
                             Row {
-                                spacing: 10
+                                spacing: 10 * panel.scale
                                 Rectangle {
                                     id: iconBox
 
                                     anchors.verticalCenter: parent.verticalCenter
-                                    implicitWidth: 35
+                                    implicitWidth: 35 * panel.scale
                                     implicitHeight: implicitWidth
                                     color: "transparent"
 
@@ -103,7 +103,7 @@ WidgetBox {
                                     }
                                     anchors.verticalCenter: parent.verticalCenter
                                     font.family: "Fira Code"
-                                    font.pixelSize: 25
+                                    font.pixelSize: 25 * panel.scale
                                     text: modelData.name
                                 }
                             }

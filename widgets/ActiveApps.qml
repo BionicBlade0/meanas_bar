@@ -8,10 +8,10 @@ WidgetBox {
     id: panelBox
 
     implicitWidth: panelLayout.implicitWidth
-    topRightRadius: 20
-    bottomLeftRadius: 20
+    topRightRadius: 20 * panel.scale
+    bottomLeftRadius: 20 * panel.scale
     hoverEnabled: false
-    visible: (panelLayout.implicitWidth == 20) ? false : true
+    visible: (panelLayout.implicitWidth == 20 * panel.scale) ? false : true
 
     MyRow {
         id: panelLayout
@@ -27,7 +27,7 @@ WidgetBox {
                 property DesktopEntry activeDesktopEntry: DesktopEntries.applications.values.filter(desktopEntry => {
                     return (desktopEntry.id == modelData.appId);
                 })[0]
-                implicitSize: 20
+                implicitSize: 20 * panel.scale
 
                 anchors.verticalCenter: panelLayout.verticalCenter
                 source: Quickshell.iconPath(activeDesktopEntry.icon)

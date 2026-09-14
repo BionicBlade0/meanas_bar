@@ -7,8 +7,8 @@ WidgetBox {
     property var datetime
 
     implicitWidth: panelLayout.implicitWidth
-    bottomRightRadius: 20
-    topLeftRadius: 20
+    bottomRightRadius: 20 * panel.scale
+    topLeftRadius: 20 * panel.scale
     hoverEnabled: false
 
     MyRow {

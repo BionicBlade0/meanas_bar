@@ -6,8 +6,8 @@ WidgetBox {
     id: panelBox
 
     implicitWidth: panelLayout.implicitWidth
-    topRightRadius: 20
-    bottomLeftRadius: 20
+    topRightRadius: 20 * panel.scale
+    bottomLeftRadius: 20 * panel.scale
     hoverEnabled: false
 
     MyRow {

@@ -9,7 +9,7 @@ TextField {
         else
             return "white";
     }
-    implicitHeight: 45
+    implicitHeight: 45 * panel.scale
     onAccepted: {
         if (searchField.focus) {
             pageField.text = "1";
@@ -20,7 +20,7 @@ TextField {
 
     font {
         family: "Fira Code"
-        pixelSize: 25
+        pixelSize: 25 * panel.scale
     }
 
     background: Rectangle {

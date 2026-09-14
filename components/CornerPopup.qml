@@ -6,7 +6,7 @@ import Quickshell.Wayland
 PanelWindow {
     id: popupWindow
 
-    property int padding: 15
+    property int padding: 15 * panel.scale
     property alias popupGrab: popupGrab
     property alias contents: popupContent.data
     property double ultimateImplicitHeight: popupInnerBox.implicitHeight + (2 * padding)
@@ -20,7 +20,7 @@ PanelWindow {
     WlrLayershell.layer: WlrLayer.Overlay
     WlrLayershell.namespace: "quickshell_popup"
     color: "transparent"
-    implicitWidth: 400
+    implicitWidth: 400 * panel.scale
     implicitHeight: {
         if (popupOuterBox.implicitHeight < popupWindow.ultimateImplicitHeight)
             return ultimateImplicitHeight;
@@ -29,8 +29,8 @@ PanelWindow {
     }
 
     margins {
-        top: 10
-        right: 5
+        top: 10 * panel.scale
+        right: 5 * panel.scale
     }
 
     anchors {
@@ -41,7 +41,7 @@ PanelWindow {
     Rectangle {
         id: popupOuterBox
 
-        radius: 20
+        radius: 20 * panel.scale
         color: "#90000000"
         implicitWidth: popupWindow.implicitWidth
         implicitHeight: (popupGrab.active) ? popupWindow.ultimateImplicitHeight : 0

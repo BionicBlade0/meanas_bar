@@ -7,8 +7,8 @@ WidgetBox {
     id: panelBox
 
     implicitWidth: panelLayout.implicitWidth
-    bottomRightRadius: 20
-    topLeftRadius: 20
+    bottomRightRadius: 20 * panel.scale
+    topLeftRadius: 20 * panel.scale
     hoverEnabled: true
     onClicked: mouse => {
         if (mouse.button == Qt.LeftButton) {
@@ -87,7 +87,7 @@ WidgetBox {
                 },
                 MyRow {
                     id: volumeControl
-                    spacing: 30
+                    spacing: 30 * panel.scale
 
                     MenuLabel {
                         text: volumeIcon.text
@@ -151,7 +151,7 @@ WidgetBox {
                         id: volumeSinksLabel
 
                         onClicked: Pipewire.preferredDefaultAudioSink = modelData
-                        leftPadding: 10
+                        leftPadding: 10 * panel.scale
                         font.family: "Fira Code"
                         text: modelData.description
                         color: (modelData == Pipewire.defaultAudioSink) ? colorDrawer.activeColor : "white"
@@ -185,7 +185,7 @@ WidgetBox {
                         id: volumeSourcesLabel
 
                         onClicked: Pipewire.preferredDefaultAudioSource = modelData
-                        leftPadding: 10
+                        leftPadding: 10 * panel.scale
                         font.family: "Fira Code"
                         text: modelData.description
                         color: (modelData == Pipewire.defaultAudioSource) ? colorDrawer.activeColor : "white"

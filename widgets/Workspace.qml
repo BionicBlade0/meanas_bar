@@ -6,8 +6,8 @@ WidgetBox {
     id: panelBox
 
     implicitWidth: panelLayout.implicitWidth
-    topRightRadius: 20
-    topLeftRadius: 20
+    topRightRadius: 20 * panel.scale
+    topLeftRadius: 20 * panel.scale
     hoverEnabled: false
 
     MyRow {
@@ -22,9 +22,9 @@ WidgetBox {
             id: panelIconBox
 
             anchors.verticalCenter: panelLayout.verticalCenter
-            topLeftRadius: 20
-            topRightRadius: 20
-            implicitWidth: panelIcon.implicitWidth + 30
+            topLeftRadius: 20 * panel.scale
+            topRightRadius: 20 * panel.scale
+            implicitWidth: panelIcon.implicitWidth + (30 * panel.scale)
             color: "transparent"
             hoverEnabled: true
             onClicked: mouse => {
@@ -38,7 +38,7 @@ WidgetBox {
                 property HyprlandWorkspace focusedWorkspace: Hyprland.focusedWorkspace
 
                 font.family: "Font Awesome 6 Pro"
-                font.pixelSize: 20
+                font.pixelSize: 20 * panel.scale
                 text: ""
                 anchors.centerIn: panelIconBox
                 rotation: 0
@@ -74,9 +74,9 @@ WidgetBox {
                 id: workspaceBox
 
                 anchors.verticalCenter: panelLayout.verticalCenter
-                topLeftRadius: 20
-                topRightRadius: 20
-                implicitWidth: workspaceLabel.implicitWidth + 30
+                topLeftRadius: 20 * panel.scale
+                topRightRadius: 20 * panel.scale
+                implicitWidth: workspaceLabel.implicitWidth + (30 * panel.scale)
                 color: "transparent"
                 onClicked: mouse => {
                     if (mouse.button == Qt.LeftButton)

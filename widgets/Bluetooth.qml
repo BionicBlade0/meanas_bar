@@ -8,8 +8,8 @@ WidgetBox {
 
     hoverEnabled: true
     implicitWidth: panelLayout.implicitWidth
-    bottomRightRadius: 20
-    topLeftRadius: 20
+    bottomRightRadius: 20 * panel.scale
+    topLeftRadius: 20 * panel.scale
     onClicked: mouse => {
         if (mouse.button == Qt.RightButton) {
             if (Bluetooth.defaultAdapter.enabled == true)
@@ -76,11 +76,11 @@ WidgetBox {
     }
 
     Rectangle {
-        implicitHeight: panelIcon.implicitHeight + 5
-        implicitWidth: 2
+        implicitHeight: panelIcon.implicitHeight + (5 * panel.scale)
+        implicitWidth: 2 * panel.scale
         color: panelIcon.color
         anchors.verticalCenter: panelBox.verticalCenter
-        x: 15
+        x: 15 * panel.scale
         visible: !Bluetooth.defaultAdapter.enabled
     }
 
@@ -97,7 +97,7 @@ WidgetBox {
 
                     Item {
                         implicitHeight: icon.implicitHeight
-                        implicitWidth: 30
+                        implicitWidth: 30 * panel.scale
 
                         MyLabel {
                             id: icon

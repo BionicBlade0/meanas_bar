@@ -1,7 +1,7 @@
 import QtQuick
 
 Row {
-    spacing: 10
-    leftPadding: 10
-    rightPadding: 10
+    spacing: 10 * panel.scale
+    leftPadding: 10 * panel.scale
+    rightPadding: 10 * panel.scale
 }

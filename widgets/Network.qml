@@ -11,8 +11,8 @@ WidgetBox {
 
     hoverEnabled: true
     implicitWidth: panelLayout.implicitWidth
-    bottomRightRadius: 20
-    topLeftRadius: 20
+    bottomRightRadius: 20 * panel.scale
+    topLeftRadius: 20 * panel.scale
     onClicked: mouse => {
         if (mouse.button == Qt.RightButton) {
             if (Networking.wifiEnabled == true)
@@ -134,7 +134,7 @@ WidgetBox {
                                 CornerPopup {
                                     id: wifiSecrets
 
-                                    innerBoxImplicitHeight: 50
+                                    innerBoxImplicitHeight: 50 * panel.scale
                                     contents: [
                                         TextField {
                                             id: secretInput
@@ -147,7 +147,7 @@ WidgetBox {
 
                                             font {
                                                 family: "Fira Code"
-                                                pixelSize: 14
+                                                pixelSize: 14 * panel.scale
                                                 bold: true
                                             }
 
@@ -158,8 +158,8 @@ WidgetBox {
                                             }
 
                                             cursorDelegate: Rectangle {
-                                                implicitHeight: 10
-                                                implicitWidth: 5
+                                                implicitHeight: 10 * panel.scale
+                                                implicitWidth: 5 * panel.scale
                                                 color: colorDrawer.activeColor
                                             }
                                         }

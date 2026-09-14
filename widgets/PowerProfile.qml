@@ -17,8 +17,8 @@ WidgetBox {
     }
 
     implicitWidth: activeProfile.implicitWidth
-    bottomRightRadius: 20
-    topLeftRadius: 20
+    bottomRightRadius: 20 * panel.scale
+    topLeftRadius: 20 * panel.scale
 
     Item {
         states: [
@@ -131,14 +131,14 @@ WidgetBox {
 
         implicitWidth: powerLabel.implicitWidth
         color: "transparent"
-        bottomRightRadius: 20
-        topLeftRadius: 20
+        bottomRightRadius: 20 * panel.scale
+        topLeftRadius: 20 * panel.scale
 
         MyLabel {
             id: powerLabel
 
-            leftPadding: 10
-            rightPadding: 10
+            leftPadding: 10 * panel.scale
+            rightPadding: 10 * panel.scale
             anchors.centerIn: parent
             font.family: "Font Awesome 6 Brands"
         }

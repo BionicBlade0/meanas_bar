@@ -8,7 +8,7 @@ Rectangle {
 
     signal clicked(mouse: MouseEvent)
 
-    implicitHeight: panel.implicitHeight - 10
+    implicitHeight: panel.implicitHeight - (10 * panel.scale)
     color: "#90000000"
 
     MouseArea {

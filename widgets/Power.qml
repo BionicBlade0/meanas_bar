@@ -11,8 +11,8 @@ WidgetBox {
         else
             return shutdown.implicitWidth;
     }
-    bottomRightRadius: 20
-    topLeftRadius: 20
+    bottomRightRadius: 20 * panel.scale
+    topLeftRadius: 20 * panel.scale
     clip: true
 
     Row {
@@ -72,8 +72,8 @@ WidgetBox {
 
         implicitWidth: powerLabel.implicitWidth
         color: "transparent"
-        bottomRightRadius: 20
-        topLeftRadius: 20
+        bottomRightRadius: 20 * panel.scale
+        topLeftRadius: 20 * panel.scale
         onClicked: mouse => {
             if (mouse.button == Qt.LeftButton)
                 process.exec(process);
@@ -82,8 +82,8 @@ WidgetBox {
         MyLabel {
             id: powerLabel
 
-            leftPadding: 10
-            rightPadding: 10
+            leftPadding: 10 * panel.scale
+            rightPadding: 10 * panel.scale
             font.family: "Font Awesome 6 Brands"
             anchors.centerIn: parent
             color: "white"

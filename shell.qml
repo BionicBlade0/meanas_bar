@@ -21,11 +21,12 @@ Scope {
             id: panel
 
             required property var modelData
+            property int scale: 1
 
             WlrLayershell.layer: WlrLayer.Bottom
             screen: modelData
             color: "transparent"
-            implicitHeight: 45
+            implicitHeight: 45 * panel.scale
 
             anchors {
                 top: true
@@ -40,11 +41,11 @@ Scope {
             Row {
                 id: leftPanel
 
-                spacing: 5
+                spacing: 5 * panel.scale
                 layoutDirection: Qt.LeftToRight
 
                 anchors {
-                    leftMargin: 5
+                    leftMargin: 5 * panel.scale
                     left: parent.left
                     verticalCenter: parent.verticalCenter
                 }
@@ -55,7 +56,7 @@ Scope {
 
                 Temperature {}
 
-                Weather {}
+                // Weather {}
 
                 ActiveApps {}
             }
@@ -66,7 +67,7 @@ Scope {
                 // parent is NOT panel
                 anchors.centerIn: parent
                 layoutDirection: Qt.LeftToRight
-                spacing: 50
+                spacing: 50 * panel.scale
 
                 anchors {
                     horizontalCenter: parent.horizontalCenter
@@ -87,13 +88,13 @@ Scope {
             Row {
                 id: rightPanel
 
-                spacing: 5
+                spacing: 5 * panel.scale
                 layoutDirection: Qt.RightToLeft
 
                 anchors {
                     right: parent.right
                     verticalCenter: parent.verticalCenter
-                    rightMargin: 5
+                    rightMargin: 5 * panel.scale
                 }
 
                 Power {}

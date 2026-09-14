@@ -10,12 +10,12 @@ PanelWindow {
     property alias icon: dataIcon.text
     property alias fontColor: dataIcon.color
 
-    implicitWidth: dataLayout.implicitWidth + 20
-    implicitHeight: dataLayout.implicitHeight + 20
+    implicitWidth: dataLayout.implicitWidth + (20 * panel.scale)
+    implicitHeight: dataLayout.implicitHeight + (20 * panel.scale)
     screen: panel.modelData
     color: "transparent"
     anchors.bottom: true
-    margins.bottom: 10
+    margins.bottom: 10 * panel.scale
     WlrLayershell.namespace: "quickshell_popup"
     WlrLayershell.layer: WlrLayer.Overlay
     exclusionMode: ExclusionMode.Ignore
@@ -24,7 +24,7 @@ PanelWindow {
         implicitWidth: dataWindow.implicitWidth
         implicitHeight: dataWindow.implicitHeight
         color: "#90000000"
-        radius: 20
+        radius: 20 * panel.scale
 
         MyRow {
             id: dataLayout
@@ -35,7 +35,7 @@ PanelWindow {
                 id: dataIcon
 
                 anchors.verticalCenter: dataLayout.verticalCenter
-                font.pixelSize: 25
+                font.pixelSize: 25 * panel.scale
                 font.family: "Font Awesome 6 Pro"
                 onTextChanged: {
                     dataWindow.visible = true;
@@ -47,7 +47,7 @@ PanelWindow {
                 id: dataLabel
 
                 anchors.verticalCenter: dataLayout.verticalCenter
-                font.pixelSize: 25
+                font.pixelSize: 25 * panel.scale
                 color: dataIcon.color
                 onTextChanged: {
                     dataWindow.visible = true;

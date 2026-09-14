@@ -29,7 +29,7 @@ PanelWindow {
         implicitWidth: popupWindow.implicitWidth
         implicitHeight: (popupGrab.active) ? popupWindow.implicitHeight : 0
         clip: true
-        radius: 20
+        radius: 20 * panel.scale
 
         Behavior on implicitHeight {
             NumberAnimation {

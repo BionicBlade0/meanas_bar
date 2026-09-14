@@ -15,8 +15,8 @@ WidgetBox {
     }
     hoverEnabled: true
     implicitWidth: panelLayout.implicitWidth
-    bottomRightRadius: 20
-    topLeftRadius: 20
+    bottomRightRadius: 20 * panel.scale
+    topLeftRadius: 20 * panel.scale
 
     MyRow {
         id: panelLayout
@@ -79,7 +79,7 @@ WidgetBox {
 
                         font {
                             family: "Fira Code"
-                            pixelSize: 25
+                            pixelSize: 25 * panel.scale
                         }
                     }
 
@@ -100,21 +100,21 @@ WidgetBox {
                     id: thumbnailBox
 
                     color: "transparent"
-                    implicitHeight: popup.implicitHeight - searchField.implicitHeight - 20
-                    implicitWidth: popup.implicitWidth - 40
+                    implicitHeight: popup.implicitHeight - searchField.implicitHeight - (20 * panel.scale)
+                    implicitWidth: popup.implicitWidth - (40 * panel.scale)
                     clip: true
 
                     GridView {
                         id: thumbnailLayout
 
                         cellWidth: thumbnailBox.implicitWidth / 3
-                        cellHeight: 200
+                        cellHeight: 200 * panel.scale
                         anchors.fill: thumbnailBox
 
                         delegate: Rectangle {
                             id: thumbnail
 
-                            radius: 20
+                            radius: 20 * panel.scale
                             clip: true
                             color: "transparent"
                             implicitHeight: thumbnailLayout.cellHeight
@@ -162,7 +162,7 @@ WidgetBox {
 
         font {
             family: "Fira Code"
-            pixelSize: 25
+            pixelSize: 25 * panel.scale
         }
 
         MouseArea {
