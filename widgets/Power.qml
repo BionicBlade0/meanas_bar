@@ -50,7 +50,7 @@ WidgetBox {
 
             anchors.verticalCenter: panelLayout.verticalCenter
             text: ""
-            onClickedCommand: ["hyprshutdown"]
+            onClickedCommand: ["hyprctl", "dispatch", "hl.dsp.exit()"]
         }
     }
 
