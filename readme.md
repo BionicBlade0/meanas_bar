@@ -9,14 +9,17 @@ An opinionated hyprland bar inspired by waybar.
 - Lack of settings (anything needs changing, go into the code)
 
 # Dependencies
+## Required
 - hyprland
 - quickshell
 - Font Awesome
 - Fira Code
-- python (optional, wallhaven and weather will not work)
+
+## Optional
+- python (wallhaven and weather will not work)
 - requests (python module `pip install requests`)
-- hyprpaper (optional)
-- hyprlock (optional)
+- hyprpaper (related to wallpaper)
+- hyprlock (related to wallpaper)
 
 # Setup
 - In the terminal execute `quickshell -d --config /config/directory`.
