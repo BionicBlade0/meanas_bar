@@ -23,6 +23,29 @@ An opinionated hyprland bar inspired by waybar.
 
 # Setup
 - In the terminal execute `quickshell -d --config /config/directory`.
+- Add the following to your `hyprland.lua` config file for blur effects.
+```
+hl.layer_rule({
+    name = "quickshell_blur",
+    match = {
+        namespace = "quickshell"
+    },
+
+    blur = true
+})
+
+hl.layer_rule({
+    name = "quickshell_popup_blur",
+    match = {
+        namespace = "quickshell_popup"
+    },
+
+    blur = true,
+    no_anim = true,
+    ignore_alpha = 0
+
+})
+```
 
 # Troubleshoot
 - The bar is configured for 1080p. If too small or large, go to `shell.qml` and change the value of `property int scale:` to any integer you see fit. If fractional scaling required, then change `propert int scale` to `property double scale`, and put the value as any fraction (not recommended though).
