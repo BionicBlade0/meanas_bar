@@ -1,5 +1,5 @@
 # Introduction
-An opinionated hyprland bar inspired by waybar.
+An opinionated no-fuss hyprland bar inspired by waybar.
 
 # Features
 ## The Good
