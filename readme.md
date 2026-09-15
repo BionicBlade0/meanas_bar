@@ -48,7 +48,7 @@ hl.layer_rule({
 ```
 
 # Troubleshoot
-- The bar is configured for 1080p. If too small or large, go to `shell.qml` and change the value of `property int scale:` to any integer you see fit. If fractional scaling required, then change `propert int scale` to `property double scale`, and put the value as any fraction (not recommended though).
+- The bar is configured for 1080p. If too small or large, go to `shell.qml` and change the value of `property int scale:` to any integer you see fit. If fractional scaling required, then change `property int scale` to `property double scale`, and put the value as any fraction (not recommended though).
 
 # Showcase
 ![](/showcase.png)
