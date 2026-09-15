@@ -3,7 +3,7 @@ An opinionated hyprland bar inspired by waybar.
 
 # Features
 ## The Good
-- Good aesthetics
+- Pleasing aesthetics
 
 ## The Bad
 - Lack of settings (anything needs changing, go into the code)
