@@ -22,7 +22,7 @@ An opinionated hyprland bar inspired by waybar.
 - hyprlock (related to wallpaper)
 
 # Setup
-- In the terminal execute `quickshell -d --config /config/directory`.
+- In the terminal execute `cd /config/directory && quickshell -d --config /config/directory`.
 - Add the following to your `hyprland.lua` config file for blur effects.
 ```
 hl.layer_rule({
